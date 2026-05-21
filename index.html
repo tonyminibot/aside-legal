@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aside — private on-device AI chat for iPhone</title>
+<meta name="description" content="Aside is a private, on-device AI chat app for iPhone. Powered by Apple Intelligence. Nothing leaves your device. Works in airplane mode.">
+<link rel="icon" href="/favicon.png">
+<meta property="og:title" content="Aside — private on-device AI chat">
+<meta property="og:description" content="Private, on-device AI chat for iPhone. Powered by Apple Intelligence. Nothing leaves your device. Works in airplane mode.">
+<meta property="og:image" content="https://getaside.app/og.png">
+<meta property="og:url" content="https://getaside.app">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aside — private on-device AI chat">
+<meta name="twitter:description" content="Private on-device AI chat for iPhone. Nothing leaves your device.">
+<meta name="twitter:image" content="https://getaside.app/og.png">
+<link rel="canonical" href="https://getaside.app">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --bg-2: #F7F6FB;
+  --fg: #0B0E27;
+  --muted: #5B5F7A;
+  --muted-2: #8B90A8;
+  --accent: #5B4FD5;
+  --accent-2: #7466F0;
+  --accent-soft: #EFEDFF;
+  --card: #FFFFFF;
+  --card-stroke: #E8E7F1;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--accent); text-decoration: none; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* Top bar */
+nav {
+  padding: 22px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 18px; letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.brand-orb {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: radial-gradient(circle, #C8C0FF 0%, var(--accent-2) 55%, var(--accent) 100%);
+  box-shadow: 0 6px 18px rgba(116,102,240,0.30);
+}
+nav .links a {
+  color: var(--muted); font-size: 14.5px; margin-left: 22px;
+}
+nav .links a:hover { color: var(--fg); }
+
+/* Hero */
+.hero {
+  padding: 70px 0 60px;
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 6px 12px; border-radius: 999px;
+}
+h1 {
+  font: 800 clamp(40px, 6.2vw, 68px)/1.04 -apple-system, "SF Pro Display", "Inter", system-ui, sans-serif;
+  margin: 16px 0 18px; letter-spacing: -0.028em;
+  color: var(--fg);
+}
+h1 .grad {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.sub {
+  font-size: 18px; line-height: 1.55; color: var(--muted); max-width: 520px;
+}
+.cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 22px; border-radius: 14px; font-weight: 600; font-size: 15px;
+  transition: transform 0.12s ease;
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+  color: white;
+  box-shadow: 0 10px 28px rgba(91,79,213,0.30);
+}
+.btn-primary:hover { transform: translateY(-1px); color: white; }
+.btn-ghost {
+  color: var(--fg);
+  border: 1px solid var(--card-stroke);
+  background: var(--card);
+}
+.btn-ghost:hover { background: var(--bg-2); }
+.muted-line { font-size: 13px; color: var(--muted-2); margin-top: 12px; }
+
+/* Phone frame helper (a thin rounded device frame over a real screenshot) */
+.phone-frame {
+  position: relative;
+  width: 280px; padding: 14px;
+  margin: 0 auto;
+  background: #0B0E27;
+  border-radius: 44px;
+  box-shadow:
+    0 40px 60px -10px rgba(11,14,39,0.20),
+    0 0 0 1px rgba(11,14,39,0.04);
+}
+.phone-frame img {
+  width: 100%; display: block; border-radius: 32px;
+  background: #fff;
+}
+.phone-frame.lg { width: 320px; padding: 14px; border-radius: 50px; }
+.phone-frame.lg img { border-radius: 38px; }
+
+/* Feature grid (real shots, no emojis) */
+.section { padding: 80px 0; }
+.section h2 {
+  font: 800 clamp(28px, 4vw, 40px)/1.15 -apple-system, "SF Pro Display", system-ui, sans-serif;
+  letter-spacing: -0.022em; margin: 0 0 14px;
+  text-align: center;
+}
+.section .sub-center {
+  text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 50px; font-size: 16.5px;
+}
+
+.feature-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  padding: 50px 0;
+}
+.feature-row.reverse { grid-template-columns: 1fr 1fr; }
+.feature-row.reverse .feature-text { order: 2; }
+.feature-row.reverse .feature-image { order: 1; }
+.feature-text .kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 10px;
+}
+.feature-text h3 {
+  font: 700 clamp(24px, 3vw, 32px)/1.2 -apple-system, "SF Pro Display", system-ui, sans-serif;
+  letter-spacing: -0.015em; margin: 0 0 12px;
+}
+.feature-text p { color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0; }
+.feature-image { display: flex; justify-content: center; }
+
+/* Three small cards under the "why" header */
+.pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  text-align: left; max-width: 920px; margin: 0 auto;
+}
+.pillar {
+  background: var(--bg-2); border-radius: 16px; padding: 24px;
+  border: 1px solid var(--card-stroke);
+}
+.pillar h4 { margin: 0 0 6px; font-size: 16px; }
+.pillar p { font-size: 14.5px; color: var(--muted); margin: 0; line-height: 1.55; }
+
+/* FAQ */
+.faq { padding: 80px 0; max-width: 760px; margin: 0 auto; }
+.faq details {
+  background: var(--bg-2); border: 1px solid var(--card-stroke);
+  border-radius: 14px; padding: 18px 22px; margin-bottom: 10px;
+}
+.faq summary {
+  font-weight: 600; cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--muted); font-size: 22px; font-weight: 400; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq p { color: var(--muted); margin: 14px 0 0; font-size: 15.5px; line-height: 1.6; }
+
+/* Final CTA */
+.final-cta {
+  background: var(--bg-2);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  margin: 40px auto 80px;
+  max-width: 920px;
+}
+.final-cta h2 {
+  font: 800 clamp(26px, 3.6vw, 36px)/1.2 -apple-system, system-ui, sans-serif;
+  letter-spacing: -0.02em; margin: 0 0 14px;
+}
+.final-cta p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
+
+/* Footer */
+footer {
+  padding: 36px 0; border-top: 1px solid var(--card-stroke);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  color: var(--muted-2); font-size: 13px;
+}
+footer a { color: var(--muted); margin-left: 16px; }
+footer a:hover { color: var(--fg); }
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero { grid-template-columns: 1fr; gap: 40px; padding: 50px 0 30px; text-align: center; }
+  .hero .sub { margin: 0 auto; }
+  .cta-row { justify-content: center; }
+  .feature-row, .feature-row.reverse {
+    grid-template-columns: 1fr; gap: 30px; padding: 30px 0;
+  }
+  .feature-row.reverse .feature-text { order: 0; }
+  .feature-row.reverse .feature-image { order: 0; }
+  .feature-text { text-align: center; }
+  .pillars { grid-template-columns: 1fr; }
+  nav .links a { margin-left: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <a class="brand" href="/">
+      <span class="brand-orb"></span>
+      Aside
+    </a>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://testflight.apple.com/" id="tf-nav">TestFlight</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Private on-device AI</span>
+      <h1>Chat with AI<br>that <span class="grad">never leaves</span><br>your iPhone.</h1>
+      <p class="sub">Aside runs entirely on-device using Apple Intelligence. No servers. No cloud. No account. Works in airplane mode. Your conversations stay where they started.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://testflight.apple.com/" id="hero-tf">Join the TestFlight beta →</a>
+        <a class="btn btn-ghost" href="#features">See features</a>
+      </div>
+      <p class="muted-line">$9.99 on the App Store · Free in TestFlight beta · iPhone 15 Pro or later · iOS 26+</p>
+    </div>
+    <div>
+      <div class="phone-frame lg">
+        <img src="/img/shot-chat.png" alt="Aside chat — a real conversation about Tokyo trip planning, with Markdown formatting">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <h2>Built for the conversations that matter</h2>
+    <p class="sub-center">Aside is for the questions you wouldn't post to a server. Health. Legal. Personal. Drafts you're not ready to share. Aside answers — and forgets nothing, because it never had a reason to remember anywhere but on your phone.</p>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="kicker">100% on-device</p>
+        <h3>Your conversations stay on your iPhone.</h3>
+        <p>Aside speaks to Apple Intelligence directly on your phone's Neural Engine. There's no server it could send your messages to. No cloud sync. No account to leak. Verify with a packet sniffer — Aside makes zero outbound network requests during a chat.</p>
+      </div>
+      <div class="feature-image">
+        <div class="phone-frame"><img src="/img/shot-chat.png" alt="Aside chat — a real conversation rendering Markdown bold text"></div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <p class="kicker">Code, Markdown, formatting</p>
+        <h3>Polished replies — even on a plane.</h3>
+        <p>Code blocks render in monospace inside framed boxes. Markdown headings and bold come through cleanly. Long-press any message to copy, regenerate, or delete. Because everything is local, you get this even at 35,000 feet.</p>
+      </div>
+      <div class="feature-image">
+        <div class="phone-frame"><img src="/img/shot-code.png" alt="Aside chat — a bash deploy script reply rendered as a code block"></div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="kicker">History + search + export</p>
+        <h3>Every chat saves on-device.</h3>
+        <p>Organized in a clean list, sorted by recency. Pull down to search across every message you've ever written. Open any chat's menu to share or copy it as Markdown. Delete in a swipe.</p>
+      </div>
+      <div class="feature-image">
+        <div class="phone-frame"><img src="/img/shot-history.png" alt="Aside chat list — multiple conversations with previews"></div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <p class="kicker">Make it yours</p>
+        <h3>Personality, look, and feel.</h3>
+        <p>Pick a persona (concise, friendly tutor, brutally honest, code-focused — or write your own). Adjust text size, toggle Markdown rendering or the suggested-prompt chips, turn haptics on or off. Aside adapts to how you actually use it.</p>
+      </div>
+      <div class="feature-image">
+        <div class="phone-frame"><img src="/img/shot-settings.png" alt="Aside Settings — persona presets, appearance toggles, text size"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-2);">
+    <h2>Why an on-device chat?</h2>
+    <p class="sub-center">Most AI chat apps ship your conversation to a server and call it "private" because they encrypt the transport. Aside takes a different shape: the model itself lives on your phone, and the conversation never has the option of leaving.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <h4>No account</h4>
+        <p>Nothing to sign up for. Install, open, chat. There's no profile, no login, no email.</p>
+      </div>
+      <div class="pillar">
+        <h4>No telemetry</h4>
+        <p>Aside makes zero outbound network requests during a chat. Verify with any network monitor.</p>
+      </div>
+      <div class="pillar">
+        <h4>No cloud</h4>
+        <p>Everything — conversations, attached photos, your settings — stays on the iPhone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 style="text-align:left;">Common questions</h2>
+    <details open>
+      <summary>Which iPhones support Aside?</summary>
+      <p>Any iPhone that supports Apple Intelligence — iPhone 15 Pro / Pro Max, and all iPhone 16 / 17 models. You'll need iOS 26 or later and Apple Intelligence enabled in Settings.</p>
+    </details>
+    <details>
+      <summary>Is Aside really free of any cloud?</summary>
+      <p>Yes. Aside uses Apple's FoundationModels framework, which runs the language model on your device's Neural Engine. There's no API key, no remote inference, no fallback to a cloud LLM. If your phone is in airplane mode, Aside still works.</p>
+    </details>
+    <details>
+      <summary>Why an on-device LLM instead of GPT-4 or Claude?</summary>
+      <p>Different trade-off. Frontier cloud models are smarter; on-device models are private. Aside is for the moments where the conversation actually matters — health questions, legal drafts, journaling, exploring an idea — and you don't want it on someone else's server.</p>
+    </details>
+    <details>
+      <summary>Will Aside ever add cloud features?</summary>
+      <p>No. The whole point is "this conversation never leaves your phone." If we ever ship cloud sync or remote inference, it'll be a separate app — Aside stays local-only.</p>
+    </details>
+    <details>
+      <summary>Can I attach photos?</summary>
+      <p>Yes. Aside uses on-device Vision to extract text and classify the image, then asks the on-device model to reason about it. The image and its analysis never leave your phone.</p>
+    </details>
+    <details>
+      <summary>Can I export a conversation?</summary>
+      <p>Open the chat's menu (⋯) and pick "Share conversation" or "Copy as Markdown". You get a clean Markdown transcript you can paste anywhere.</p>
+    </details>
+    <details>
+      <summary>How much does Aside cost?</summary>
+      <p>$9.99 one-time on the App Store. No subscription, no in-app purchase, no upsell. Free during the TestFlight beta if you want to try it first.</p>
+    </details>
+    <details>
+      <summary>Can I buy the source code?</summary>
+      <p>Yes — Aside's complete iOS Swift source is available as a one-time $19 bundle, designed to be AI-agent friendly (well-commented, AGENTS.md included). Same package the app ships from. Coming soon on Polar.</p>
+    </details>
+  </section>
+
+  <section class="final-cta">
+    <h2>Install it. Forget about it. Talk to it whenever.</h2>
+    <p>Free in TestFlight while we polish the public release.</p>
+    <a class="btn btn-primary" href="https://testflight.apple.com/" id="final-tf">Join the TestFlight beta →</a>
+  </section>
+
+  <footer>
+    <div>© 2026 Aside.</div>
+    <div>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:hello@getaside.app">Contact</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
