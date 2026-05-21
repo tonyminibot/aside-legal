@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Aside</title>
+<meta name="description" content="Aside's privacy policy. Short version: Aside collects nothing.">
+<link rel="canonical" href="https://getaside.app/privacy">
+<style>
+:root {
+  --bg: #FFFFFF; --bg-2: #F7F6FB; --fg: #0B0E27;
+  --muted: #5B5F7A; --accent: #5B4FD5; --accent-2: #7466F0;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background: var(--bg); color: var(--fg);
+  margin: 0; -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 24px; }
+nav { padding: 22px 0; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 18px; color: var(--fg); text-decoration: none;
+}
+.brand-orb {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: radial-gradient(circle, #C8C0FF, var(--accent-2) 55%, var(--accent));
+}
+h1 {
+  font: 800 38px/1.15 -apple-system, "SF Pro Display", system-ui, sans-serif;
+  letter-spacing: -0.02em; margin: 40px 0 8px;
+}
+.updated { color: var(--muted); font-size: 14px; margin-bottom: 36px; }
+h2 {
+  font: 700 22px/1.3 -apple-system, "SF Pro Display", system-ui, sans-serif;
+  margin: 36px 0 12px; letter-spacing: -0.012em;
+}
+p { color: var(--fg); margin: 0 0 16px; }
+.muted { color: var(--muted); }
+.callout {
+  background: var(--bg-2); border-radius: 14px; padding: 20px 22px;
+  border: 1px solid #E8E7F1; margin: 28px 0;
+}
+.callout strong { display: block; font-size: 14px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+a { color: var(--accent); }
+footer {
+  padding: 36px 0; margin-top: 60px; border-top: 1px solid #E8E7F1;
+  color: var(--muted); font-size: 13px; display: flex; justify-content: space-between;
+}
+footer a { color: var(--muted); margin-left: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav>
+  <a class="brand" href="/">
+    <span class="brand-orb"></span>
+    Aside
+  </a>
+</nav>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Effective: 2026-05-21 · Last updated: 2026-05-21</p>
+
+<div class="callout">
+  <strong>Short version</strong>
+  <p style="margin: 0;">Aside collects nothing. The app talks to Apple Intelligence on your iPhone's Neural Engine. Your conversations, photos, audio, and settings never leave your device. There is no server, no account, no telemetry.</p>
+</div>
+
+<h2>What Aside stores on your device</h2>
+<p>Everything Aside creates stays on your iPhone:</p>
+<ul>
+  <li>Your conversations and messages</li>
+  <li>Photos you attach to a conversation</li>
+  <li>Your settings (persona, appearance, toggles)</li>
+  <li>App preferences (whether you've finished the intro, etc.)</li>
+</ul>
+<p>This data lives in Aside's iOS sandbox, encrypted at rest by iOS. iCloud Backup (if you have it enabled for the device) is the only path off-device, and it's encrypted end-to-end by Apple — Aside is not involved.</p>
+
+<h2>What Aside sends over the network</h2>
+<p>During a chat, <strong>nothing</strong>. Aside makes zero outbound network requests during a conversation. You can verify this with a packet sniffer or any iOS network-monitoring tool. The language model is Apple's on-device foundation model, and Aside calls it locally.</p>
+<p>The only network requests Aside ever makes are routine iOS system calls outside the app's control — e.g. App Store / TestFlight version checks, App Tracking Transparency framework checks, or photo-library entitlement system calls. Aside does not make any HTTP requests of its own.</p>
+
+<h2>What Aside does not collect</h2>
+<ul>
+  <li>No analytics. No "anonymous usage data". No event tracking.</li>
+  <li>No crash reports leaving your device (iOS may collect its own with your system-level consent; Aside is not involved).</li>
+  <li>No advertising identifiers (IDFA, IDFV).</li>
+  <li>No location.</li>
+  <li>No account. There is no sign-up, no login, no profile.</li>
+</ul>
+
+<h2>Third parties</h2>
+<p>Aside uses no third-party SDKs, no analytics providers, no advertising networks, no AI APIs, and no cloud services of any kind.</p>
+
+<h2>Permissions Aside asks for, and why</h2>
+<ul>
+  <li><strong>Photo library</strong> — only when you tap the photo button in a chat, so you can attach a photo. Aside reads the photo locally on-device.</li>
+  <li><strong>Camera</strong> — only if you choose to take a new photo to attach. (Not used in the current release.)</li>
+  <li><strong>Microphone</strong> — only when you tap the mic button to dictate. The audio is processed by Apple's on-device Speech framework. Aside does not record or store audio.</li>
+  <li><strong>Speech recognition</strong> — Apple's framework requires this entitlement; it runs on-device.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Aside is rated 12+ on the App Store. It does not collect any personal information from anyone — including children.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the privacy model ever changes (e.g. an optional cloud feature is added), this page will be updated and the change will be disclosed in the app before any new behavior takes effect. The local-only commitment for the core chat experience is permanent.</p>
+
+<h2>Contact</h2>
+<p>Questions: <a href="mailto:hello@getaside.app">hello@getaside.app</a></p>
+
+<footer>
+  <div>© 2026 Aside.</div>
+  <div>
+    <a href="/">Home</a>
+    <a href="/terms">Terms</a>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
