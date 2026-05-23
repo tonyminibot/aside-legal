@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Aside — Support</title>
+<link rel="canonical" href="https://getaside.app/support">
+<link rel="icon" href="/favicon.png">
+<meta name="theme-color" content="#7466F0">
+<style>
+body{max-width:720px;margin:40px auto;padding:0 20px;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#0B0E27}
+h1{font-size:30px;letter-spacing:-.01em}
+.sub{color:#5B5F7A;font-size:15px;margin-bottom:36px}
+h2{font-size:21px;margin-top:36px;border-top:1px solid #E8E7F1;padding-top:24px}
+h2:first-of-type{border:0;padding-top:0;margin-top:0}
+h3{font-size:16px;margin:20px 0 4px}
+a{color:#5B4FD5}
+nav{margin-bottom:24px;font-size:14px}
+nav a{margin-right:18px;color:#5B4FD5}
+code{background:#EFEDFF;padding:2px 5px;border-radius:4px;font-size:14px}
+.muted{color:#8B90A8;font-size:14px}
+hr{border:none;border-top:1px solid #E8E7F1;margin:32px 0}
+.footer{margin-top:48px;font-size:13px;color:#8B90A8}
+</style>
+</head><body>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/changelog">Changelog</a>
+  <a href="/privacy">Privacy</a>
+</nav>
+
+<h1>Aside — Support</h1>
+<p class="sub">Aside is a private, on-device AI chat app for iPhone — powered by Apple Intelligence, no servers, no account, works in airplane mode. Five Apple Intelligence demos baked in. Free on the App Store; full Xcode source as a one-time $19 purchase.</p>
+
+<h2>Your purchase &amp; invoices (source code)</h2>
+<p>Payments are handled by <strong>Polar</strong>, our merchant of record. Polar issues your receipt/invoice and manages the download — so everything about a purchase lives in the Polar customer portal:</p>
+<p><strong>→ <a href="https://polar.sh/typing-technology-co-ltd/portal">Open the customer portal</a></strong></p>
+<p>Enter the email you used at checkout; Polar emails you a one-time link. From the portal you can:</p>
+<h3>Re-download the source</h3>
+<p>Your purchase doesn't expire — sign in to the portal any time to download the latest delivered zip. Newer revisions (e.g. when a new App Store version ships) get added to the same benefit, so re-downloading always gets you the latest.</p>
+<h3>Get your invoice / receipt</h3>
+<p>The order-confirmation email from Polar is your receipt. A formal invoice (with your billing details, VAT/tax where applicable) can be downloaded from the order in the portal. Because Polar is the merchant of record, any tax is handled there.</p>
+<h3>Manage the purchase</h3>
+<p>The portal lists all your orders and benefits. The source bundle is a one-time purchase — there's no subscription to cancel.</p>
+
+<h2>Purchase FAQ</h2>
+<p><strong>I didn't get any email after paying.</strong> Check the spam folder and confirm which address you entered at checkout — the email goes there, not necessarily your main inbox. You can always access the download via the <a href="https://polar.sh/typing-technology-co-ltd/portal">customer portal</a>.</p>
+<p><strong>What's included?</strong> The complete Xcode project (xcodegen <code>project.yml</code> + all Swift source), the five Apple Intelligence demos (Image Playground, Writing Tools, Translate, Summarize, Smart Reply), the FoundationModels wrapper, SwiftData persistence, the on-device voice input, and a customer-facing <code>AGENTS.md</code>. ~2.3 MB.</p>
+<p><strong>Can I use it commercially?</strong> Yes — the license covers personal and commercial use. Build derivatives, change branding, ship under your own developer account.</p>
+<p><strong>How do I build it?</strong> <code>brew install xcodegen</code> → <code>xcodegen generate</code> → open <code>Solo.xcodeproj</code> → set your team in Signing → change <code>com.example.aside</code> to your own bundle id → run on iOS 26+ (Apple Intelligence required).</p>
+<p><strong>Refunds?</strong> There's a 7-day money-back guarantee — reply to your Polar receipt email within 7 days. Polar (merchant of record) processes the refund.</p>
+
+<h2>The app — common questions</h2>
+<h3>What devices does Aside work on?</h3>
+<p>iPhone 15 Pro or later, running iOS 26 or newer. Apple Intelligence is required because the entire chat runs on it — there's no cloud fallback.</p>
+<h3>Where is my chat data stored?</h3>
+<p>Locally on your iPhone, in Aside's app sandbox via SwiftData. Nothing leaves the device. If you have iCloud Backup enabled, your encrypted device backup will include the chat database — that's between you and Apple.</p>
+<h3>Why is the first reply slow?</h3>
+<p>Apple Intelligence loads the on-device model on the first prompt of a session. Subsequent replies in the same session are noticeably faster. The model itself ships with iOS — no download needed.</p>
+<h3>Will it work offline?</h3>
+<p>Yes, entirely. Aside makes zero network calls. Toggle Airplane Mode and the chat continues working.</p>
+<h3>Can I change the persona?</h3>
+<p>Settings → Persona. Choose from presets or write your own system prompt. The new persona applies on the next message.</p>
+<h3>How does voice input work?</h3>
+<p>Microphone button → speak → tap Send. Transcription runs on-device via Apple's Speech framework. You can optionally enable Auto-send in Settings.</p>
+
+<h2>Bugs &amp; feature requests</h2>
+<p>Fastest way to reach the developer is on X — <a href="https://x.com/tdinh_me">@tdinh_me</a>. Mention:</p>
+<ul>
+<li>iPhone model and iOS version</li>
+<li>Aside version (Settings → About)</li>
+<li>A short description of what happened and what you expected</li>
+</ul>
+<p>For purchase issues (refund, re-download, invoice), use the <a href="https://polar.sh/typing-technology-co-ltd/portal">Polar customer portal</a> with the email you used at checkout.</p>
+
+<h2>Privacy</h2>
+<p>See the <a href="/privacy">Privacy Policy</a>. Short version: Aside collects nothing — the chat runs entirely on your device, all data stays local.</p>
+
+</body></html>
