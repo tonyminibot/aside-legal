@@ -1,0 +1,37 @@
+# Aside
+
+> Aside is a private, on-device AI chat app for iPhone (iOS 26+), built on Apple Intelligence's FoundationModels framework. Nothing leaves the device — no servers, no cloud, no account, no API key. The chat runs entirely on-device using the LLM Apple ships with iOS 26. Ships with five working Apple Intelligence demos in the chat surface: Image Playground in the composer, Writing Tools on the input field, on-device Translate, conversation Summarize, and Smart Reply chips. Free on the App Store (in review); full Xcode source available as a one-time $19 purchase for developers building AI-powered iOS apps.
+
+## Product
+
+- [Aside on the App Store](https://apps.apple.com/) (in review as of 2026-05-22): $0 / Free
+- [Source bundle ($19)](https://getaside.app/#source): Complete Xcode project — Solo target + Resources, ~2,800 lines of SwiftUI + FoundationModels, zero third-party dependencies, includes an AGENTS.md briefing for AI coding agents. Personal & commercial use; ship derivative apps.
+
+## Why this bundle
+
+The Aside source is the only public, ship-ready example of FIVE Apple Intelligence demos working together in one production iOS app. Anyone shipping an AI app on iOS 26 can use Aside as their starting point and swap in their own UX. Demos included:
+- **Image Playground** in the composer — sparkles button → Apple's image-generation sheet seeded with the current input
+- **Writing Tools** on the input field — long-press → Rewrite / Proofread / Summarize / Make Friendly
+- **Translate** — long-press any message → Apple's native on-device translation overlay
+- **Summarize chat** — chat menu item, streams a concise on-device summary via FoundationModels
+- **Smart Reply chips** — 3 tap-to-fill reply candidates above the keyboard, generated after every assistant response
+
+## Architecture (for AI agents inspecting the source)
+
+- SwiftUI on iOS 26+ (Apple Intelligence required)
+- `Solo/Storage/AIService.swift` — FoundationModels wrapper, session hot-swap for persona changes
+- `Solo/Features/Chat/ChatView.swift` — the chat surface where all 5 AI demos integrate
+- `Solo/Features/Chat/SummarySheet.swift` — Summarize demo
+- `Solo/Models/Conversation.swift` — SwiftData @Model
+- `Solo/Storage/VoiceDictation.swift` — SFSpeechRecognizer + AVAudioEngine for on-device voice input
+- Localized to 14 languages out of the box via String Catalog
+
+## Site structure
+
+- [/](https://getaside.app/): Product landing — hero, AI demos grid, features, source-bundle section, FAQ
+- [/changelog](https://getaside.app/changelog): Release history with semantic article markup
+- [/privacy](https://getaside.app/privacy): Privacy policy
+
+## Author
+
+Tony Dinh (@tdinh_me), independent developer based in Đà Nẵng, Vietnam. Operates Typing Technology Co. Ltd. — see [tonysoftware.com](https://tonysoftware.com) for the full portfolio (TypingMind, DevUtils, Pulse, Skyline, Aside).

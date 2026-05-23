@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getaside.app/sitemap.xml
