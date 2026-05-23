@@ -318,6 +318,42 @@ footer a:hover { color: var(--fg); }
     </div>
   </section>
 
+  <section class="section" id="ai-demos" style="background:linear-gradient(160deg,#F9F7FF 0%,#EFEDFF 100%);padding-top:54px;padding-bottom:54px">
+   <div class="container">
+    <div style="text-align:center;margin-bottom:18px"><span style="display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px">New in v1.1</span></div>
+    <h2 style="text-align:center;margin-bottom:14px">Five Apple Intelligence demos, baked in.</h2>
+    <p class="sub-center" style="max-width:640px">Aside isn't just a chat window — it shows what Apple's on-device AI stack can actually do. Every demo runs locally on the Neural Engine, no API key, no cloud.</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:42px" id="demos-grid">
+      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
+        <div style="font-size:26px;margin-bottom:10px">🎨</div>
+        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Image Playground</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles button opens Apple's image-generation sheet, seeded with whatever you've typed.</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
+        <div style="font-size:26px;margin-bottom:10px">✍️</div>
+        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Writing Tools</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press the composer to proofread, rewrite, or change tone — system-level, anywhere text is.</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
+        <div style="font-size:26px;margin-bottom:10px">🌐</div>
+        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Translate</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press any reply, translate to any of Apple's supported languages, fully on-device.</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
+        <div style="font-size:26px;margin-bottom:10px">📝</div>
+        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Summarize</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles menu in any chat distills the conversation into a streaming summary via FoundationModels.</p>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
+        <div style="font-size:26px;margin-bottom:10px">💬</div>
+        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Smart Reply</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Three quick-reply chips appear above the keyboard after each AI message — tap one to keep the thread going.</p>
+      </div>
+    </div>
+    <style>@media(max-width:840px){#demos-grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:520px){#demos-grid{grid-template-columns:1fr!important}}</style>
+   </div>
+  </section>
+
   <section class="section" id="features">
     <h2>Built for the conversations that matter</h2>
     <p class="sub-center">Aside is for the questions you wouldn't post to a server. Health. Legal. Personal. Drafts you're not ready to share. Aside answers — and forgets nothing, because it never had a reason to remember anywhere but on your phone.</p>
@@ -432,6 +468,7 @@ footer a:hover { color: var(--fg); }
         <ul style="list-style:none;display:grid;gap:13px;padding:0;margin:0">
           <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">Full Xcode project</b> (xcodegen <code style="background:rgba(255,255,255,.12);padding:1px 5px;border-radius:5px;font-size:13px;color:#fff">project.yml</code> + all Swift source) — open and build.</li>
           <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">FoundationModels integration</b> — clean <code style="background:rgba(255,255,255,.12);padding:1px 5px;border-radius:5px;font-size:13px;color:#fff">AIService</code> wrapper, session hot-swap for persona changes.</li>
+          <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">Five Apple Intelligence demos</b> — Image Playground in the composer, Writing Tools, Translate, Summarize, Smart Reply chips. Working source for each.</li>
           <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">SwiftData persistence</b> with Conversation + Message models.</li>
           <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">On-device voice input</b> (SFSpeechRecognizer + AVAudioEngine).</li>
           <li style="position:relative;padding-left:30px;font-size:15.5px;color:#dad5ff;line-height:1.55"><span style="position:absolute;left:0;top:0;color:#7ee0a8;font-weight:800">✓</span><b style="color:#fff;font-weight:700">Polished SwiftUI features</b> — chat, history, regenerate/stop, code-block rendering, custom-illustrated onboarding with TimelineView ambient motion.</li>
