@@ -323,34 +323,40 @@ footer a:hover { color: var(--fg); }
     <div style="text-align:center;margin-bottom:18px"><span style="display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px">New in v1.1</span></div>
     <h2 style="text-align:center;margin-bottom:14px">Five Apple Intelligence demos, baked in.</h2>
     <p class="sub-center" style="max-width:640px">Aside isn't just a chat window — it shows what Apple's on-device AI stack can actually do. Every demo runs locally on the Neural Engine, no API key, no cloud.</p>
-    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:42px" id="demos-grid">
-      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
-        <div style="font-size:26px;margin-bottom:10px">🎨</div>
-        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Image Playground</h4>
-        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles button opens Apple's image-generation sheet, seeded with whatever you've typed.</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
-        <div style="font-size:26px;margin-bottom:10px">✍️</div>
-        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Writing Tools</h4>
-        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press the composer to proofread, rewrite, or change tone — system-level, anywhere text is.</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
-        <div style="font-size:26px;margin-bottom:10px">🌐</div>
-        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Translate</h4>
-        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press any reply, translate to any of Apple's supported languages, fully on-device.</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
-        <div style="font-size:26px;margin-bottom:10px">📝</div>
-        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Summarize</h4>
-        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles menu in any chat distills the conversation into a streaming summary via FoundationModels.</p>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:22px 18px;border:1px solid #ECE9F9">
-        <div style="font-size:26px;margin-bottom:10px">💬</div>
-        <h4 style="font-size:15.5px;margin:0 0 6px 0;color:var(--fg)">Smart Reply</h4>
-        <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Three quick-reply chips appear above the keyboard after each AI message — tap one to keep the thread going.</p>
+
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:42px;align-items:center;margin-top:42px" id="demos-hero">
+      <div class="phone-frame" style="max-width:300px;margin:0 auto"><img src="/img/shot-chat.png" alt="Aside chat — Apple Intelligence running on-device"></div>
+      <div>
+        <ol id="demos-list" style="list-style:none;counter-reset:demo;padding:0;margin:0;display:grid;gap:14px">
+          <li style="counter-increment:demo;background:#fff;border-radius:14px;padding:16px 18px 16px 56px;border:1px solid #ECE9F9;position:relative">
+            <span style="position:absolute;left:18px;top:16px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:14px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">1</span>
+            <h4 style="font-size:15.5px;margin:0 0 4px 0;color:var(--fg)">Image Playground</h4>
+            <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles button opens Apple's image-generation sheet, seeded with whatever you've typed.</p>
+          </li>
+          <li style="counter-increment:demo;background:#fff;border-radius:14px;padding:16px 18px 16px 56px;border:1px solid #ECE9F9;position:relative">
+            <span style="position:absolute;left:18px;top:16px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:14px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">2</span>
+            <h4 style="font-size:15.5px;margin:0 0 4px 0;color:var(--fg)">Writing Tools</h4>
+            <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press the composer to proofread, rewrite, or change tone — system-level, anywhere text is.</p>
+          </li>
+          <li style="counter-increment:demo;background:#fff;border-radius:14px;padding:16px 18px 16px 56px;border:1px solid #ECE9F9;position:relative">
+            <span style="position:absolute;left:18px;top:16px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:14px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">3</span>
+            <h4 style="font-size:15.5px;margin:0 0 4px 0;color:var(--fg)">Translate</h4>
+            <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Long-press any reply, translate to any of Apple's supported languages, fully on-device.</p>
+          </li>
+          <li style="counter-increment:demo;background:#fff;border-radius:14px;padding:16px 18px 16px 56px;border:1px solid #ECE9F9;position:relative">
+            <span style="position:absolute;left:18px;top:16px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:14px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">4</span>
+            <h4 style="font-size:15.5px;margin:0 0 4px 0;color:var(--fg)">Summarize</h4>
+            <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Sparkles menu in any chat distills the conversation into a streaming summary via FoundationModels.</p>
+          </li>
+          <li style="counter-increment:demo;background:#fff;border-radius:14px;padding:16px 18px 16px 56px;border:1px solid #ECE9F9;position:relative">
+            <span style="position:absolute;left:18px;top:16px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:14px;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">5</span>
+            <h4 style="font-size:15.5px;margin:0 0 4px 0;color:var(--fg)">Smart Reply</h4>
+            <p style="font-size:13.5px;color:var(--muted);margin:0;line-height:1.55">Three quick-reply chips appear above the keyboard after each AI message — tap one to keep the thread going.</p>
+          </li>
+        </ol>
       </div>
     </div>
-    <style>@media(max-width:840px){#demos-grid{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:520px){#demos-grid{grid-template-columns:1fr!important}}</style>
+    <style>@media(max-width:840px){#demos-hero{grid-template-columns:1fr!important;gap:32px!important} #demos-hero .phone-frame{max-width:260px!important}}</style>
    </div>
   </section>
 
