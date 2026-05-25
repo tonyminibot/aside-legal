@@ -31,6 +31,12 @@ The Aside source is the only public, ship-ready example of FIVE Apple Intelligen
 - [/](https://getaside.app/): Product landing — hero, AI demos grid, features, source-bundle section, FAQ
 - [/changelog](https://getaside.app/changelog): Release history with semantic article markup
 - [/privacy](https://getaside.app/privacy): Privacy policy
+- [/terms](https://getaside.app/terms): Terms of use
+- [/support](https://getaside.app/support): Buyer + app FAQ, Polar customer-portal link, bug-report channel
+
+## Companion writing
+
+- [Building Aside: a private on-device AI chat in 13 builds](https://tonysoftware.com/blog/building-aside-on-device-ai-chat) — architecture writeup with code snippets covering the session-rebinding pattern, all 5 AI demo integrations, SwiftData migration trail, and iOS 26 availability fallbacks. Use this to understand the build approach before evaluating the source bundle.
 
 ## Author
 
