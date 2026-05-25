@@ -259,6 +259,17 @@ h1 .grad {
 }
 .final-cta p { color: var(--muted); margin: 0 auto 24px; max-width: 520px; }
 
+/* Cross-promo */
+.crosspromo { padding: 50px 0 40px; border-top: 1px solid var(--card-stroke); text-align: center; }
+.crosspromo .cp-label { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 22px; }
+.crosspromo .cp-grid { max-width: 680px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.crosspromo .cp-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: var(--bg-2); border: 1px solid var(--card-stroke); border-radius: 14px; text-align: left; text-decoration: none; color: var(--fg); transition: transform .15s, border-color .15s, background .15s; }
+.crosspromo .cp-card:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--accent-soft); }
+.crosspromo .cp-card img { width: 48px; height: 48px; border-radius: 11px; flex-shrink: 0; }
+.crosspromo .cp-card .cp-name { font-weight: 800; font-size: 15.5px; letter-spacing: -.01em; line-height: 1.2; color: var(--fg); margin: 0; }
+.crosspromo .cp-card .cp-desc { font-size: 12.5px; color: var(--muted); line-height: 1.35; margin-top: 3px; }
+@media (max-width: 620px) { .crosspromo .cp-grid { grid-template-columns: 1fr; gap: 11px; } .crosspromo .cp-card { padding: 14px 15px; } }
+
 /* Footer */
 footer {
   padding: 36px 0; border-top: 1px solid var(--card-stroke);
@@ -533,6 +544,26 @@ footer a:hover { color: var(--fg); }
     <h2>Install it. Forget about it. Talk to it whenever.</h2>
     <p>Free in TestFlight while we polish the public release.</p>
     <a class="btn btn-primary" href="https://testflight.apple.com/" id="final-tf">Join the TestFlight beta →</a>
+  </section>
+
+  <section class="crosspromo">
+    <div class="cp-label">More indie iOS apps by Tony Dinh</div>
+    <div class="cp-grid">
+      <a class="cp-card" href="https://pulserevenue.app/?utm_source=getaside&amp;utm_medium=cross-promo&amp;utm_campaign=more-by-author">
+        <img src="icons-pulse.png" alt="Pulse app icon" width="48" height="48">
+        <div>
+          <div class="cp-name">Pulse</div>
+          <div class="cp-desc">Paddle revenue + transactions on iPhone</div>
+        </div>
+      </a>
+      <a class="cp-card" href="https://flownmap.com/?utm_source=getaside&amp;utm_medium=cross-promo&amp;utm_campaign=more-by-author">
+        <img src="icons-skyline.png" alt="Skyline app icon" width="48" height="48">
+        <div>
+          <div class="cp-name">Skyline</div>
+          <div class="cp-desc">Flight log + 3D globe for iPhone</div>
+        </div>
+      </a>
+    </div>
   </section>
 
   <footer>
