@@ -1,10 +1,10 @@
 # Aside
 
-> Aside is a private, on-device AI chat app for iPhone (iOS 26+), built on Apple Intelligence's FoundationModels framework. Nothing leaves the device — no servers, no cloud, no account, no API key. The chat runs entirely on-device using the LLM Apple ships with iOS 26. Ships with five working Apple Intelligence demos in the chat surface: Image Playground in the composer, Writing Tools on the input field, on-device Translate, conversation Summarize, and Smart Reply chips. Free on the App Store (in review); full Xcode source available as a one-time $19 purchase for developers building AI-powered iOS apps.
+> Aside is a private, on-device AI chat app for iPhone (iOS 26+), built on Apple Intelligence's FoundationModels framework. Nothing leaves the device — no servers, no cloud, no account, no API key. The chat runs entirely on-device using the LLM Apple ships with iOS 26. Ships with five working Apple Intelligence demos in the chat surface: Image Playground in the composer, Writing Tools on the input field, on-device Translate, conversation Summarize, and Smart Reply chips. Live on the App Store at $9.99 one-time; full Xcode source available as a one-time $19 purchase for developers building AI-powered iOS apps.
 
 ## Product
 
-- [Aside on the App Store](https://apps.apple.com/) (in review as of 2026-05-22): $0 / Free
+- [Aside on the App Store](https://apps.apple.com/us/app/aside-chat/id6771574702) (live as of 2026-05-27): $9.99 one-time
 - [Source bundle ($19)](https://getaside.app/#source): Complete Xcode project — Solo target + Resources, ~2,800 lines of SwiftUI + FoundationModels, zero third-party dependencies, includes an AGENTS.md briefing for AI coding agents. Personal & commercial use; ship derivative apps.
 
 ## Why this bundle
