@@ -296,7 +296,7 @@ footer a:hover { color: var(--fg); }
 </style>
 <script defer data-website-id="dfid_Wjt2sMIrksqJkWIjx0SG3" data-domain="getaside.app" src="https://datafa.st/js/script.js"></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which iPhones support Aside?","acceptedAnswer":{"@type":"Answer","text":"Any iPhone that supports Apple Intelligence — iPhone 15 Pro / Pro Max, and all iPhone 16 / 17 models. You'll need iOS 26 or later and Apple Intelligence enabled in Settings."}},{"@type":"Question","name":"Is Aside really free of any cloud?","acceptedAnswer":{"@type":"Answer","text":"Yes. Aside uses Apple's FoundationModels framework, which runs the language model on your device's Neural Engine. There's no API key, no remote inference, no fallback to a cloud LLM. If your phone is in airplane mode, Aside still works."}},{"@type":"Question","name":"Why an on-device LLM instead of GPT-4 or Claude?","acceptedAnswer":{"@type":"Answer","text":"Different trade-off. Frontier cloud models are smarter; on-device models are private. Aside is for the moments where the conversation actually matters — health questions, legal drafts, journaling, exploring an idea — and you don't want it on someone else's server."}},{"@type":"Question","name":"Will Aside ever add cloud features?","acceptedAnswer":{"@type":"Answer","text":"No. The whole point is \"this conversation never leaves your phone.\" If we ever ship cloud sync or remote inference, it'll be a separate app — Aside stays local-only."}},{"@type":"Question","name":"Can I attach photos?","acceptedAnswer":{"@type":"Answer","text":"Yes. Aside uses on-device Vision to extract text and classify the image, then asks the on-device model to reason about it. The image and its analysis never leave your phone."}},{"@type":"Question","name":"Can I export a conversation?","acceptedAnswer":{"@type":"Answer","text":"Open the chat's menu (⋯) and pick \"Share conversation\" or \"Copy as Markdown\". You get a clean Markdown transcript you can paste anywhere."}},{"@type":"Question","name":"How much does Aside cost?","acceptedAnswer":{"@type":"Answer","text":"$9.99 one-time on the App Store. No subscription, no in-app purchase, no upsell. Free during the TestFlight beta if you want to try it first."}},{"@type":"Question","name":"Can I buy the source code?","acceptedAnswer":{"@type":"Answer","text":"Yes — Aside's complete iOS Swift source is available as a one-time $19 bundle, designed to be AI-agent friendly (well-commented, AGENTS.md included). Same package the app ships from. See the source-sale section below for details."}},{"@type":"Question","name":"Couldn't I just build this myself?","acceptedAnswer":{"@type":"Answer","text":"Sure — and if you'd rather, you should. ~2,800 lines of SwiftUI on top of FoundationModels is maybe 20-40 hours of focused work if you're already fluent with Swift, SwiftData, and the Apple Intelligence frameworks. But most of that time is the same gotchas already solved here: the session-rebinding pattern when instructions change, the Image Playground sheet flow, SwiftData migration, the iOS 26 / Apple Intelligence availability fallbacks. $19 ≈ \"skip the gotchas.\" If you'd rather build it from scratch, the free blog post on tonysoftware.com walks through the architecture in detail."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which iPhones support Aside?","acceptedAnswer":{"@type":"Answer","text":"Any iPhone that supports Apple Intelligence — iPhone 15 Pro / Pro Max, and all iPhone 16 / 17 models. You'll need iOS 26 or later and Apple Intelligence enabled in Settings."}},{"@type":"Question","name":"Is Aside really free of any cloud?","acceptedAnswer":{"@type":"Answer","text":"Yes. Aside uses Apple's FoundationModels framework, which runs the language model on your device's Neural Engine. There's no API key, no remote inference, no fallback to a cloud LLM. If your phone is in airplane mode, Aside still works."}},{"@type":"Question","name":"Why an on-device LLM instead of GPT-4 or Claude?","acceptedAnswer":{"@type":"Answer","text":"Different trade-off. Frontier cloud models are smarter; on-device models are private. Aside is for the moments where the conversation actually matters — health questions, legal drafts, journaling, exploring an idea — and you don't want it on someone else's server."}},{"@type":"Question","name":"Will Aside ever add cloud features?","acceptedAnswer":{"@type":"Answer","text":"No. The whole point is \"this conversation never leaves your phone.\" If we ever ship cloud sync or remote inference, it'll be a separate app — Aside stays local-only."}},{"@type":"Question","name":"Can I attach photos?","acceptedAnswer":{"@type":"Answer","text":"Yes. Aside uses on-device Vision to extract text and classify the image, then asks the on-device model to reason about it. The image and its analysis never leave your phone."}},{"@type":"Question","name":"Can I export a conversation?","acceptedAnswer":{"@type":"Answer","text":"Open the chat's menu (⋯) and pick \"Share conversation\" or \"Copy as Markdown\". You get a clean Markdown transcript you can paste anywhere."}},{"@type":"Question","name":"How much does Aside cost?","acceptedAnswer":{"@type":"Answer","text":"$9.99 one-time on the App Store. No subscription, no in-app purchase, no upsell."}},{"@type":"Question","name":"Can I buy the source code?","acceptedAnswer":{"@type":"Answer","text":"Yes — Aside's complete iOS Swift source is available as a one-time $19 bundle, designed to be AI-agent friendly (well-commented, AGENTS.md included). Same package the app ships from. See the source-sale section below for details."}},{"@type":"Question","name":"Couldn't I just build this myself?","acceptedAnswer":{"@type":"Answer","text":"Sure — and if you'd rather, you should. ~2,800 lines of SwiftUI on top of FoundationModels is maybe 20-40 hours of focused work if you're already fluent with Swift, SwiftData, and the Apple Intelligence frameworks. But most of that time is the same gotchas already solved here: the session-rebinding pattern when instructions change, the Image Playground sheet flow, SwiftData migration, the iOS 26 / Apple Intelligence availability fallbacks. $19 ≈ \"skip the gotchas.\" If you'd rather build it from scratch, the free blog post on tonysoftware.com walks through the architecture in detail."}}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tony Dinh","item":"https://tonysoftware.com/"},{"@type":"ListItem","position":2,"name":"Aside","item":"https://getaside.app/"}]}
@@ -324,9 +324,9 @@ footer a:hover { color: var(--fg); }
       <p class="sub">Aside runs entirely on-device using Apple Intelligence. No servers. No cloud. No account. Works in airplane mode. Your conversations stay where they started.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#source" id="hero-source-cta">Get the source ($19) →</a>
-        <a class="btn btn-ghost" href="#features">See features</a>
+        <a class="btn btn-ghost" href="https://apps.apple.com/us/app/aside-chat/id6771574702" id="hero-appstore-cta">Download on the App Store</a>
       </div>
-      <p class="muted-line">Built on Apple Intelligence (FoundationModels) · iPhone 15 Pro or later · iOS 26+ · App Store launch in review</p>
+      <p class="muted-line">Built on Apple Intelligence (FoundationModels) · iPhone 15 Pro or later · iOS 26+ · Live on the App Store</p>
     </div>
     <div>
       <div class="phone-frame lg">
@@ -473,7 +473,7 @@ footer a:hover { color: var(--fg); }
     </details>
     <details>
       <summary>How much does Aside cost?</summary>
-      <p>$9.99 one-time on the App Store. No subscription, no in-app purchase, no upsell. Free during the TestFlight beta if you want to try it first.</p>
+      <p>$9.99 one-time on the App Store. No subscription, no in-app purchase, no upsell. <a href="https://apps.apple.com/us/app/aside-chat/id6771574702">View on the App Store →</a></p>
     </details>
     <details>
       <summary>Can I buy the source code?</summary>
@@ -509,7 +509,7 @@ footer a:hover { color: var(--fg); }
           <a class="btn btn-primary" style="margin-top:18px;background:#fff;color:#5B4FD5;display:inline-block;padding:13px 22px;border-radius:12px;font-weight:700" href="https://buy.polar.sh/polar_cl_IYAqdY5lhse1Pne9N2eSarXdiVsjE47hn6CnZ2myPyL">Buy the source</a>
           <div style="font-size:13px;color:#cdc6ff;margin-top:14px">✓ 7-day money-back guarantee</div>
           <small style="display:block;color:#a39ad3;margin-top:14px;font-size:12px;line-height:1.55">Payments handled by Polar (Merchant of Record). VAT/tax handled. Receipt + portal access by email.</small>
-          <div style="margin-top:10px;font-size:12.5px;color:#9890bd"><span style="color:#a39ad3">Last refreshed</span> May 23, 2026 · <a href="/changelog" style="color:#cdc6ff;text-decoration:underline;text-decoration-color:rgba(205,198,255,0.35)">See changelog →</a></div>
+          <div style="margin-top:10px;font-size:12.5px;color:#9890bd"><span style="color:#a39ad3">Last refreshed</span> May 27, 2026 · <a href="/changelog" style="color:#cdc6ff;text-decoration:underline;text-decoration-color:rgba(205,198,255,0.35)">See changelog →</a></div>
         </aside>
       </div>
     </div>
@@ -549,8 +549,11 @@ footer a:hover { color: var(--fg); }
 
   <section class="final-cta">
     <h2>Ship your own on-device AI chat app this week.</h2>
-    <p>The complete Aside Xcode project — same source that's in App Store review — with five Apple Intelligence demos already wired up. Personal &amp; commercial license.</p>
-    <a class="btn btn-primary" href="#source" id="final-source-cta">Get the source ($19) →</a>
+    <p>The complete Aside Xcode project — same source that ships in the live App Store app — with five Apple Intelligence demos already wired up. Personal &amp; commercial license.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="#source" id="final-source-cta">Get the source ($19) →</a>
+      <a class="btn btn-ghost" href="https://apps.apple.com/us/app/aside-chat/id6771574702" id="final-appstore-cta">Or try the app first</a>
+    </div>
   </section>
 
   <section class="crosspromo">
@@ -576,6 +579,7 @@ footer a:hover { color: var(--fg); }
   <footer>
     <div>© 2026 Aside.</div>
     <div>
+      <a href="https://apps.apple.com/us/app/aside-chat/id6771574702">App Store</a>
       <a href="/changelog">Changelog</a>
       <a href="/privacy">Privacy</a>
       <a href="/terms">Terms</a>
